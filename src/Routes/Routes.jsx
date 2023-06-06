@@ -6,6 +6,8 @@ import Type from "../Pages/Type/Type";
 import ErrorPage from "../Components/ErrorPage/ErrorPage";
 import Insight from "../Pages/Insight/Insight";
 import Status from "../Pages/Status/Status";
+import SignUp from "../Pages/SignUp/SignUp";
+import SignIn from "../Pages/SignIn/SignIn";
 
 
 
@@ -20,7 +22,7 @@ const router = createBrowserRouter([
                 element: <Home></Home>,
             },
             {
-                path: '/alleips',
+                path: '/allEips',
                 element: <AllEips></AllEips>,
             },
             {
@@ -35,6 +37,14 @@ const router = createBrowserRouter([
                 path: '/insight',
                 element: <Insight></Insight>,
             },
+            {
+                path: '/signUp',
+                element: <SignUp></SignUp>,
+            },
+            {
+                path: "/signIn",
+                element: <SignIn></SignIn>,
+            }
         ]
     }
 ])

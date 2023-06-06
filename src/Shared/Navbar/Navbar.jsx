@@ -7,7 +7,7 @@ const Navbar = () => {
 
     const menu = <>
         <li>
-            <Link className="mx-4 text-xl hover:border-b-2 p-4 font-semibold border-b-white duration-100" to="/alleips">AllEIPs</Link>
+            <Link className="mx-4 text-xl hover:border-b-2 p-4 font-semibold border-b-white duration-100" to="/allEips">AllEIPs</Link>
         </li>
         <li>
             <Link className="mx-4 text-xl hover:border-b-2 p-4 font-semibold border-b-white duration-100" to="/type">Type</Link>
@@ -17,6 +17,9 @@ const Navbar = () => {
         </li>
         <li>
             <Link className="mx-4 text-xl hover:border-b-2 p-4 font-semibold border-b-white duration-100" to="/insight">Insight</Link>
+        </li>
+        <li>
+            <Link className="mx-4 text-xl hover:border-b-2 p-4 font-semibold border-b-white duration-100" to="/signIn">SignIn</Link>
         </li>
     </>
 
