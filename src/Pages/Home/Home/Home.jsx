@@ -1,8 +1,23 @@
+import EipsStatus from "../EipsStatus/EipsStatus";
+import EipsStatusCards from "../EipsStatusCard/EipsStatusCards";
+import EipsTypeAndCategories from "../EipsTypeAndCategories/EipsTypeAndCategories";
+import LineChart from "../LineChart/LineChart";
 
 const Home = () => {
     return (
-        <div className="mt-20 text-white">
-            home page
+        <div>
+            <div>
+                <EipsStatusCards></EipsStatusCards>
+            </div>
+            <div>
+                {/* <EipsTypeAndCategories></EipsTypeAndCategories> */}
+            </div>
+            <div>
+                <EipsStatus></EipsStatus>
+            </div>
+            <div>
+                {/* <LineChart></LineChart> */}
+            </div>
         </div>
     );
 };

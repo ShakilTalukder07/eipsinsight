@@ -20,7 +20,7 @@ const SignIn = () => {
         <div className='h-[500px] flex justify-center items-center mt-4 mb-10'>
             <div className='w-96 p-7 shadow-2xl bg-[#1B3838] rounded-lg'>
                 <img src="" alt="" />
-                <img className="w-20 h-20 absolute left-[585px] top-32" src={eipLogo} alt="" />
+                {/* <img className="w-20 h-20 absolute left-[585px] top-32" src={eipLogo} alt="" /> */}
                 <h2 className='text-2xl text-center font-bold text-white mt-10 mb-6'>Sign In</h2>
                 <form onSubmit={handleSubmit(handleSignUp)}>
                     <div className="form-control w-full max-w-xs">

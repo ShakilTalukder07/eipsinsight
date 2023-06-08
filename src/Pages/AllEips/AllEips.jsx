@@ -1,11 +1,9 @@
 
 const AllEips = () => {
     return (
-        <>
-        <div className="mt-20 text-white">
-            This is all eips page
-        </div>
-        </>
+        <div className='font-bold text-3xl text-center my-40 text-white'>
+        All EIPs Page Is Coming Soon...
+    </div>
     );
 };
 
