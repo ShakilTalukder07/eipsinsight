@@ -1,11 +1,11 @@
 
 const SingleCard = ({ card }) => {
 
-    console.log(card);
+    // console.log(card);
     const { status, number } = card
 
     return (
-        <div className={`flex justify-center items-center w-40 h-16 text-center px-4 py-2 gap-2 shadow-lg rounded-md ${(status == "Living") ? "bg-sky-400" : " " &&
+        <div className={`flex justify-between items-center w-56 h-24 text-center px-4 py-2 gap-3 shadow-lg rounded-md ${(status == "Living") ? "bg-sky-400" : " " &&
             (status == "Final") ? "bg-orange-400" : " " &&
                 (status == "Last Call") ? "bg-cyan-400" : " " &&
                     (status == "Review") ? "bg-blue-400" : " " &&
@@ -15,10 +15,10 @@ const SingleCard = ({ card }) => {
             }`}>
 
             <div className='w-1/2'>
+                <p className='text-sm text-black'>{status}</p>
                 <h2 className=" font-bold text-black text-2xl">{number}</h2>
             </div>
             <div className="className='w-1/2'">
-                <p className='text xl text-black'>{status}</p>
             </div>
         </div>
     );

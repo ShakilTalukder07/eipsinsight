@@ -6,14 +6,17 @@ import LineChart from "../LineChart/LineChart";
 const Home = () => {
     return (
         <div>
-            <div>
+            <div className="mt-10">
                 <EipsStatusCards></EipsStatusCards>
             </div>
-            <div>
-                {/* <EipsTypeAndCategories></EipsTypeAndCategories> */}
+            <div className="flex flex-col lg:flex-row justify-center items-center gap-10">
+
+            <div className="my-4 lg:my-10">
+                <EipsTypeAndCategories></EipsTypeAndCategories>
             </div>
-            <div>
+            <div className="my-4 lg:my-10">
                 <EipsStatus></EipsStatus>
+            </div>
             </div>
             <div>
                 {/* <LineChart></LineChart> */}

@@ -28,7 +28,8 @@ const options = {
         },
         title: {
             display: true,
-            text: 'EIP Created Date Bar Chart',
+            text: 'EIPs Status Bar Chart',
+            position: "top"
         },
     },
 };
@@ -38,25 +39,49 @@ const EipsTypeAndCategories = () => {
 
     const [data, setData] = useState({
 
-        labels: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+        labels: ['Withdrawn', 'Living', 'Final', 'Last_Call', 'Review', 'Draft', 'Stagnant'],
         datasets: [
             {
-                label: 'Dataset 1',
+                label: 'Withdrawn',
                 data: [],
-                borderColor: 'rgb(255, 99, 132)',
-                backgroundColor: 'rgba(25, 90, 13, 0.5)',
+                borderColor: 'rgba(249, 251, 251)',
+                backgroundColor: 'rgba(255, 115, 115)',
             },
             {
-                label: 'Dataset 2',
+                label: 'Living',
                 data: [],
-                borderColor: 'rgb(53, 162, 235)',
-                backgroundColor: 'rgba(53, 162, 235, 0.5)',
+                borderColor: 'rgba(249, 251, 251)',
+                backgroundColor: 'rgba(59, 201, 219)',
             },
             {
-                label: 'Dataset 3',
+                label: 'Final',
                 data: [],
-                borderColor: 'rgb(53, 162, 235)',
-                backgroundColor: 'rgba(53, 162, 235, 0.5)',
+                borderColor: 'rgba(249, 251, 251)',
+                backgroundColor: 'rgba(43, 204, 156)',
+            },
+            {
+                label: 'Last_Call',
+                data: [],
+                borderColor: 'rgba(249, 251, 251)',
+                backgroundColor: 'rgba(113, 221, 131)',
+            },
+            {
+                label: 'Review',
+                data: [],
+                borderColor: 'rgba(249, 251, 251)',
+                backgroundColor: 'rgba(61, 159, 241)',
+            },
+            {
+                label: 'Draft',
+                data: [],
+                borderColor: 'rgba(249, 251, 251)',
+                backgroundColor: 'rgba(252, 199, 37)',
+            },
+            {
+                label: 'Stagnant',
+                data: [],
+                borderColor: 'rgba(249, 251, 251)',
+                backgroundColor: 'rgba(255, 195, 127)',
             },
         ],
     });
@@ -64,35 +89,36 @@ const EipsTypeAndCategories = () => {
     useEffect(() => {
         const fetchData = async () => {
 
-            const dataSet1 = [];
+            const number = [];
             const dataSet2 = [];
             const labelSet = [];
 
-            await fetch("../../../../public/data.json")
+            await fetch("../../../../public/eipsStatus.json")
                 .then(res => res.json())
                 .then((res) => {
-                    // console.log("ressss", res)
+                    console.log("ressss", res)
                     for (const val of res) {
-                        dataSet1.push(val.eip);
-                        dataSet2.push(val.type)
-                        labelSet.push(val.created)
+                        number.push(val.number);
+                        // dataSet2.push(val.type)
+                        labelSet.push(val.status)
 
                     }
                     setData({
                         labels: labelSet,
                         datasets: [
                             {
-                                label: 'EIP',
-                                data: dataSet1,
-                                borderColor: 'rgb(255, 99, 132)',
-                                backgroundColor: 'rgba(99, 132, 0.5)',
+                                label: "EIPs",
+                                data: number,
+                                borderColor: 'rgba(249, 251, 251)',
+                                // 'rgba(99, 132, 0.5)'
+                                backgroundColor: 'rgba(249, 251, 251)',
                             },
-                            {
-                                label: 'Type',
-                                data: dataSet2,
-                                borderColor: 'rgb(53, 162, 235)',
-                                backgroundColor: 'rgba(53, 235, 0.5)',
-                            },
+                            // {
+                            //     label: 'Type',
+                            //     data: dataSet2,
+                            //     borderColor: 'rgb(53, 162, 235)',
+                            //     backgroundColor: 'rgba(53, 235, 0.5)',
+                            // },
                             // {
                             //     label: 'Created Date',
                             //     data: labelSet,
@@ -113,7 +139,7 @@ const EipsTypeAndCategories = () => {
 
 
     return (
-        <div className='w-80 h-80 text-white'>
+        <div className='w-[400px] h-[340px] rounded-lg text-white bg-[#1B3838]'>
             <Bar data={data} options={options} />
         </div>
     );
