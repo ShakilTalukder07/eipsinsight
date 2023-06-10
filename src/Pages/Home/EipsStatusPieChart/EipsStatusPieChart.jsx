@@ -4,7 +4,7 @@ import { Pie } from 'react-chartjs-2';
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 
-const EipsStatus = () => {
+const EipsStatusPieChart = () => {
 
     const options = {
         responsive: true,
@@ -12,10 +12,11 @@ const EipsStatus = () => {
             legend: {
                 position: 'right',
             },
-            title: {
-                display: true,
-                text: 'EIPs Status Pie Chart',
-            },
+            // title: {
+            //     display: true,
+            //     text: 'EIPs Types Pie Chart',
+            //     position: "bottom"
+            // },
         },
     };
 
@@ -48,10 +49,13 @@ const EipsStatus = () => {
     }
 
     return (
-        <div className='w-[500px] h-[300px] rounded-lg text-white bg-[#1B3838]'>
-            <Pie data={data} options={options} />
+        <div className='flex flex-col w-[520px] h-[350px] rounded-lg text-black bg-white'>
+            <h1 className='text-center text-xl font-bold mt-4'>EIPs Types Pie Chart</h1>
+            <div className='w-[500px] h-[330px] flex justify-center items-center'>
+                <Pie data={data} options={options} />
+            </div>
         </div>
     );
 };
 
-export default EipsStatus;
+export default EipsStatusPieChart;

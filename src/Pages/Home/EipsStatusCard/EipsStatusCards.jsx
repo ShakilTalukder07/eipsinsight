@@ -17,7 +17,7 @@ const EipsStatusCards = () => {
 
     }, [])
 
-    console.log(allCard);
+    // console.log(allCard);
 
 
     if (loading) {
@@ -27,7 +27,7 @@ const EipsStatusCards = () => {
 
     return (
 
-        <div className='grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-5 mx-8'>
+        <div className='grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mx-8'>
             {
                 allCard?.length && allCard?.map((card) =>
                     <SingleCard

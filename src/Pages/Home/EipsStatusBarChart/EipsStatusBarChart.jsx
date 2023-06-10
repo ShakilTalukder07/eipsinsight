@@ -24,18 +24,19 @@ const options = {
     responsive: true,
     plugins: {
         legend: {
-            position: 'right',
+            // position: 'right',
+            display: false
         },
-        title: {
-            display: true,
-            text: 'EIPs Status Bar Chart',
-            position: "top"
-        },
+        // title: {
+        //     display: true,
+        //     text: 'EIPs Types Bar Chart',
+        //     position: "bottom"
+        // },
     },
 };
 
 
-const EipsTypeAndCategories = () => {
+const EipsStatusBarChart = () => {
 
     const [data, setData] = useState({
 
@@ -96,7 +97,7 @@ const EipsTypeAndCategories = () => {
             await fetch("../../../../public/eipsStatus.json")
                 .then(res => res.json())
                 .then((res) => {
-                    console.log("ressss", res)
+                    // console.log("ressss", res)
                     for (const val of res) {
                         number.push(val.number);
                         // dataSet2.push(val.type)
@@ -146,10 +147,13 @@ const EipsTypeAndCategories = () => {
 
 
     return (
-        <div className='w-[500px] h-[300px] rounded-lg text-white bg-[#1B3838]'>
-            <Bar data={data} options={options} />
+        <div className='flex flex-col w-[520px] h-[350px] rounded-lg text-black bg-white'>
+            <h1 className='text-center text-xl font-bold mt-4'>EIPs Types Bar Chart</h1>
+            <div className='w-[500px] h-[330px] flex justify-center items-center mx-2'>
+                <Bar data={data} options={options} />
+            </div>
         </div>
     );
 };
 
-export default EipsTypeAndCategories;
+export default EipsStatusBarChart;
