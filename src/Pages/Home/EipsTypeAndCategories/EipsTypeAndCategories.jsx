@@ -110,8 +110,15 @@ const EipsTypeAndCategories = () => {
                                 label: "EIPs",
                                 data: number,
                                 borderColor: 'rgba(249, 251, 251)',
-                                // 'rgba(99, 132, 0.5)'
-                                backgroundColor: 'rgba(249, 251, 251)',
+                                backgroundColor: [
+                                    'rgba(59, 201, 219)',
+                                    'rgba(43, 204, 156)',
+                                    'rgba(113, 221, 131)',
+                                    'rgba(61, 159, 241)',
+                                    'rgba(252, 199, 37)',
+                                    'rgba(255, 195, 127)',
+                                    'rgba(255, 115, 115)',
+                                ],
                             },
                             // {
                             //     label: 'Type',
@@ -139,7 +146,7 @@ const EipsTypeAndCategories = () => {
 
 
     return (
-        <div className='w-[400px] h-[340px] rounded-lg text-white bg-[#1B3838]'>
+        <div className='w-[500px] h-[300px] rounded-lg text-white bg-[#1B3838]'>
             <Bar data={data} options={options} />
         </div>
     );

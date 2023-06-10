@@ -2,12 +2,12 @@ import { createBrowserRouter } from "react-router-dom";
 import Main from "../Layout/Main";
 import Home from "../Pages/Home/Home/Home";
 import AllEips from "../Pages/AllEips/AllEips";
-import Type from "../Pages/Type/Type";
 import ErrorPage from "../Components/ErrorPage/ErrorPage";
 import Insight from "../Pages/Insight/Insight";
 import Status from "../Pages/Status/Status";
 import SignUp from "../Pages/SignUp/SignUp";
 import SignIn from "../Pages/SignIn/SignIn";
+import Type from "../Pages/Type/Type/Type";
 
 
 

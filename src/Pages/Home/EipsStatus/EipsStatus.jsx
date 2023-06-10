@@ -14,7 +14,7 @@ const EipsStatus = () => {
             },
             title: {
                 display: true,
-                text: 'EIPs Status Bar Chart',
+                text: 'EIPs Status Pie Chart',
             },
         },
     };
@@ -48,7 +48,7 @@ const EipsStatus = () => {
     }
 
     return (
-        <div className='w-[400px] h-[340px] rounded-lg text-white bg-[#1B3838]'>
+        <div className='w-[500px] h-[300px] rounded-lg text-white bg-[#1B3838]'>
             <Pie data={data} options={options} />
         </div>
     );

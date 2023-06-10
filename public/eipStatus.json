@@ -1,0 +1,16 @@
+[
+    {
+        "type": "Living",
+        "number": 2,
+        "status": [
+            {
+                "category": "Meta",
+                "number": 1
+            },
+            {
+                "category": "Informational",
+                "number": 1
+            }
+        ]
+    }
+]

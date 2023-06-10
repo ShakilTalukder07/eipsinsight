@@ -8,7 +8,7 @@ const EipsStatusCards = () => {
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
-        fetch('../../../../public/eipsStatus.json')
+        fetch('../../../../public/eipType.json')
             .then(res => res.json())
             .then(data => {
                 setAllCard(data)
@@ -28,7 +28,6 @@ const EipsStatusCards = () => {
     return (
 
         <div className='grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-5 mx-8'>
-            {/* <h1 className='text-white'>{allCard.length}</h1> */}
             {
                 allCard?.length && allCard?.map((card) =>
                     <SingleCard
