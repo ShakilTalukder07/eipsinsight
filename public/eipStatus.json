@@ -12,5 +12,27 @@
                 "number": 1
             }
         ]
+    },
+    {
+        "type": "Withdraw",
+        "number": 26,
+        "status": [
+            {
+                "category": "Core",
+                "number": 19
+            },
+            {
+                "category": "ERC",
+                "number": 5
+            },
+            {
+                "category": "Interface",
+                "number": 1
+            },
+            {
+                "category": "Informational",
+                "number": 1
+            }
+        ]
     }
 ]

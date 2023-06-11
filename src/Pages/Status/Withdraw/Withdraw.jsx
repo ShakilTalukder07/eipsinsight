@@ -33,7 +33,8 @@ const options = {
     },
 };
 
-const Living = () => {
+
+const Withdraw = () => {
 
     const [data, setData] = useState({
 
@@ -54,9 +55,6 @@ const Living = () => {
         ],
     });
 
-    // console.log(data);
-
-
     useEffect(() => {
         const fetchData = async () => {
 
@@ -69,15 +67,15 @@ const Living = () => {
 
                     // console.log("ressss", res[0].status[0].number)
 
-                    for (const value of res[0].status) {
+                    for (const value of res[1].status) {
                         number.push(value.number);
                         // dataSet2.push(val.type)
                         labelSet.push(value.category);
 
                     }
                     setData({
-                        type: "Living",
-                        number: 2,
+                        type: "Withdraw",
+                        number: 26,
                         labels: labelSet,
                         datasets: [
                             {
@@ -85,8 +83,10 @@ const Living = () => {
                                 data: number,
                                 borderColor: 'rgba(249, 251, 251)',
                                 backgroundColor: [
-                                    'rgba(147, 107, 98)',
-                                    'rgba(43, 48, 69)'
+                                    'rgba(96, 165, 250)',
+                                    'rgba(192, 132, 252)',
+                                    'rgba(74, 222, 128)',
+                                    'rgba(34, 211, 238)',
                                 ],
                             },
                         ],
@@ -100,10 +100,9 @@ const Living = () => {
         fetchData();
     }, [])
 
-
     return (
         <div>
-            <h1 className='flex justify-center items-center bg-white text-black text-2xl font-bold rounded-lg w-32 h-12 mb-2 mx-2'>{data.type}<span className="bg-[#3BC9DB] px-3 ml-2 rounded-xl">{data.number}</span> </h1>
+            <h1 className='flex justify-center items-center bg-white text-black text-2xl font-bold rounded-lg w-48 h-12 mb-2 mx-2'>{data.type}<span className="bg-[#FF4E4E] px-3 ml-2 rounded-xl">{data.number}</span> </h1>
             <div className='w-[500px] h-[330px] flex justify-center items-center mx-2 rounded-lg bg-white'>
                 <Bar data={data} options={options} />
             </div>
@@ -111,4 +110,4 @@ const Living = () => {
     );
 };
 
-export default Living;
+export default Withdraw;

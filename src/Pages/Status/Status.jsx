@@ -1,9 +1,15 @@
 import Living from "./Living/Living";
+import Withdraw from "./Withdraw/Withdraw";
 
 const Status = () => {
     return (
         <div className='font-bold text-3xl text-center mt-10 mx-10 text-white'>
-            <Living></Living>
+            <div>
+                <Living></Living>
+            </div>
+            <div className="mt-10">
+                <Withdraw></Withdraw>
+            </div>
         </div>
     );
 };
