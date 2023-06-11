@@ -1,65 +1,53 @@
-import {
-    Chart as ChartJS,
-    CategoryScale,
-    LinearScale,
-    PointElement,
-    LineElement,
-    Title,
-    Tooltip,
-    Legend,
-} from 'chart.js';
-
-import { Line } from 'react-chartjs-2';
-
-ChartJS.register(
-    CategoryScale,
-    LinearScale,
-    PointElement,
-    LineElement,
-    Title,
-    Tooltip,
-    Legend
-);
+import { Line } from '@ant-design/charts';
 
 
 const StatusCardsLineChart = () => {
 
-    const options = {
-        responsive: true,
-        plugins: {
-            legend: {
-                position: 'top',
-            },
-            title: {
-                display: true,
-                text: 'Chart.js Line Chart',
-            },
+    const data = [
+        { year: '1991', value: 3 },
+        { year: '1992', value: 4 },
+        { year: '1993', value: 3.5 },
+        { year: '1994', value: 5 },
+        { year: '1995', value: 4.9 },
+        { year: '1996', value: 6 },
+        { year: '1997', value: 7 },
+        { year: '1998', value: 9 },
+        { year: '1999', value: 13 },
+      ];
+      const config = {
+        data,
+        height: 400,
+        xField: 'year',
+        yField: 'value',
+        point: {
+          size: 5,
+          shape: 'diamond | circule',
         },
-    };
-    const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
-
-    const data = {
-        labels,
-        datasets: [
-            {
-                label: 'Dataset 1',
-                data: [35, 535, 25, 25],
-                borderColor: 'rgb(255, 99, 132)',
-                backgroundColor: 'rgba(255, 99, 132, 0.5)',
-            },
-            {
-                label: 'Dataset 2',
-                data: [54, 63, 63, 24],
-                borderColor: 'rgb(53, 162, 235)',
-                backgroundColor: 'rgba(53, 162, 235, 0.5)',
-            },
-        ],
-    };
+        tooltip: {
+          formatter: (data) => {
+            return {
+              name: '',
+              value: any,
+            };
+          },
+          customContent: (name, data) =>
+            `<div>${data?.map((item) => {
+              return `<div class="tooltip-chart" >
+                  <span class="tooltip-item-name">${item?.name}</span>
+                  <span class="tooltip-item-value">${item?.value}</span>
+                </div>`;
+            })}</div>`,
+        //   showMarkers: true,
+        //   showContent: true,
+          position: 'right | left',
+        //   showCrosshairs: true,
+        },
+      };
 
     return (
-        <div className="text-white">
-            line chart
-            <Line options={options} data={data} />;
+        <div className="text-white mr-1 my-1 w-36 h-16">
+            {/* line chart */}
+            <Line {...config} />
         </div>
     );
 };

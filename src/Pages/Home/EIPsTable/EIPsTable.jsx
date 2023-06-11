@@ -14,11 +14,20 @@ const EIPsTable = () => {
         setLoading(false)
     }, [])
 
+
     if (loading) {
         return <Spinner></Spinner>
     }
 
-    console.log(tableData);
+    // console.log(tableData);
+
+    let allData = tableData
+
+    console.log(allData.length);
+
+    // for(const values in allData){
+    //     // console.log(values)
+    // }
 
     return (
         <div>
@@ -81,7 +90,7 @@ const EIPsTable = () => {
                                     </tr>
                                 </thead>
                                 <tbody className="divide-y divide-gray-200">
-
+                                    {/* <h1 className="text-white">{tableData.length}</h1> */}
                                     {/* {
                                         tableData.map(table =>
                                             <SingleTable

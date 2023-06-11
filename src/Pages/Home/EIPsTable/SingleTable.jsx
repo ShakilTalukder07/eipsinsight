@@ -1,7 +1,7 @@
 
 const SingleTable = ({ table }) => {
 
-    // console.log(table);
+    console.log(table);
 
     return (
         <div>

@@ -101,9 +101,9 @@ const Withdraw = () => {
     }, [])
 
     return (
-        <div>
-            <h1 className='flex justify-center items-center bg-white text-black text-2xl font-bold rounded-lg w-48 h-12 mb-2 mx-2'>{data.type}<span className="bg-[#FF4E4E] px-3 ml-2 rounded-xl">{data.number}</span> </h1>
-            <div className='w-[500px] h-[330px] flex justify-center items-center mx-2 rounded-lg bg-white'>
+        <div className="shadow-3xl transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-104 duration-200 ...">
+            <h1 className='flex justify-center items-center bg-white text-black text-2xl font-bold rounded-sm w-48 h-12 mb-2 mx-2'>{data.type}<span className="bg-[#FF4E4E] px-3 ml-2 rounded-sm">{data.number}</span> </h1>
+            <div className='w-[500px] h-[330px] flex justify-center items-center mx-2 p-2 rounded-sm bg-white'>
                 <Bar data={data} options={options} />
             </div>
         </div>

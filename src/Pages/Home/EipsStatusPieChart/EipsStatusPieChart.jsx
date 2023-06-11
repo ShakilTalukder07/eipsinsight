@@ -21,10 +21,10 @@ const EipsStatusPieChart = () => {
     };
 
     const data = {
-        labels: ['Withdrawn', 'Living', 'Final', 'Last_Call', 'Review', 'Draft', 'Stagnant'],
+        labels: ['Withdrawn (26)', 'Living (2)', 'Final (137)', 'Last_Call (20)', 'Review (51)', 'Draft (123)', 'Stagnant (251)'],
         datasets: [
             {
-                label: '# of Votes',
+                label: 'Number of EIPs',
                 data: [26, 2, 137, 20, 51, 123, 251],
                 backgroundColor: [
                     'rgba(255, 115, 115)',
@@ -49,10 +49,12 @@ const EipsStatusPieChart = () => {
     }
 
     return (
-        <div className='flex flex-col w-[520px] h-[350px] rounded-lg text-black bg-white'>
-            <h1 className='text-center text-xl font-bold mt-4'>EIPs Types Pie Chart</h1>
-            <div className='w-[500px] h-[330px] flex justify-center items-center'>
-                <Pie data={data} options={options} />
+        <div className="shadow-3xl transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-104 duration-200 ...">
+            <div className='flex flex-col w-[500px] h-[350px] rounded-lg text-black bg-white'>
+                <h1 className='text-start text-xl font-bold mt-3 ml-3'>EIPs Status <span className='ml-2'>610</span></h1>
+                <div className='w-[500px] h-[330px] flex justify-center items-center'>
+                    <Pie data={data} options={options} />
+                </div>
             </div>
         </div>
     );

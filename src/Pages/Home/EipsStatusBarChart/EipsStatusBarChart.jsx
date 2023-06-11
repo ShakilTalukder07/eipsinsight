@@ -98,10 +98,10 @@ const EipsStatusBarChart = () => {
                 .then(res => res.json())
                 .then((res) => {
                     // console.log("ressss", res)
-                    for (const val of res) {
-                        number.push(val.number);
+                    for (const value of res) {
+                        number.push(value.number);
                         // dataSet2.push(val.type)
-                        labelSet.push(val.status)
+                        labelSet.push(value.status)
 
                     }
                     setData({
@@ -147,10 +147,12 @@ const EipsStatusBarChart = () => {
 
 
     return (
-        <div className='flex flex-col w-[520px] h-[350px] rounded-lg text-black bg-white'>
-            <h1 className='text-center text-xl font-bold mt-4'>EIPs Types Bar Chart</h1>
-            <div className='w-[500px] h-[330px] flex justify-center items-center mx-2'>
-                <Bar data={data} options={options} />
+        <div className="shadow-3xl transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-104 duration-200 ...">
+            <div className='flex flex-col w-[500px] h-[350px] rounded-lg text-black bg-white'>
+                <h1 className='text-center text-xl font-bold mt-4'>EIPs Types Bar Chart</h1>
+                <div className='w-[480px] h-[330px] flex justify-center items-center mx-2'>
+                    <Bar data={data} options={options} />
+                </div>
             </div>
         </div>
     );

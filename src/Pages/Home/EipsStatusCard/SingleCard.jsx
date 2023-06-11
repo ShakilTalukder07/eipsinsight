@@ -1,3 +1,4 @@
+import StatusCardsLineChart from "../StatusCardsLineChart/StatusCardsLineChart";
 
 const SingleCard = ({ card }) => {
 
@@ -5,7 +6,7 @@ const SingleCard = ({ card }) => {
     const { type, number } = card
 
     return (
-        <div className={`flex justify-between items-center w-[270px] h-32 text-center px-4 py-2 gap-3 shadow-lg rounded-md ${(type == "Standard Track") ? "bg-sky-400" : " " &&
+        <div className={`flex justify-between items-center w-[250px] h-28 text-center px-4 py-2 gap-3 shadow-lg rounded-md ${(type == "Standard Track") ? "bg-sky-400" : " " &&
         (type == "Meta") ? "bg-orange-400" : " " &&
         (type == "Informational") ? "bg-cyan-400" : " " &&
         (type == "Core") ? "bg-blue-400" : " " &&
@@ -19,6 +20,7 @@ const SingleCard = ({ card }) => {
                 <h2 className=" font-bold text-black text-2xl">{number}</h2>
             </div>
             <div className="className='w-1/2'">
+                <StatusCardsLineChart></StatusCardsLineChart>
             </div>
         </div>
     );
