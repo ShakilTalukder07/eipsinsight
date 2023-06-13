@@ -8,7 +8,7 @@ const EIPsTable = () => {
     const [tableData, setTableData] = useState()
 
     useEffect(() => {
-        fetch("https://eipsinsight.com/api/getAll")
+        fetch("../../../../public/allData.json")
             .then(res => res.json())
             .then(data => setTableData(data))
         setLoading(false)
@@ -19,15 +19,9 @@ const EIPsTable = () => {
         return <Spinner></Spinner>
     }
 
-    // console.log(tableData);
+    console.log(tableData);
 
-    let allData = tableData
-
-    console.log(allData.length);
-
-    // for(const values in allData){
-    //     // console.log(values)
-    // }
+  
 
     return (
         <div>

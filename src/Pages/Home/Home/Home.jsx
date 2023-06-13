@@ -2,6 +2,7 @@ import EipsStatusPieChart from "../EipsStatusPieChart/EipsStatusPieChart";
 import EipsStatusCards from "../EipsStatusCard/EipsStatusCards";
 import EIPsTable from "../EIPsTable/EIPsTable";
 import EipsTypeDonughtChart from "../EipsTypeDonughtChart/EipsTypeDonughtChart";
+import AllEipsBarChart from "../AllEipsBarChart/AllEipsBarChart";
 
 
 const Home = () => {
@@ -19,8 +20,11 @@ const Home = () => {
                     <EipsStatusPieChart></EipsStatusPieChart>
                 </div>
             </div>
-            <div>
-                {/* <EIPsTable></EIPsTable> */}
+            <div className="my-4 lg:my-10 mx-12">
+                <AllEipsBarChart></AllEipsBarChart>
+            </div>
+            <div className="my-4 lg:my-10 mx-12">
+                <EIPsTable></EIPsTable>
             </div>
         </div>
     );
