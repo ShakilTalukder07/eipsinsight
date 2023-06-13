@@ -102,7 +102,7 @@ const EipsTypeDonughtChart = () => {
     return (
         <div className="shadow-3xl transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-104 duration-200 ...">
             <div className='flex flex-col w-[500px] h-[350px] rounded-lg text-black bg-white'>
-                <h1 className='text-start text-xl font-bold mt-3 ml-3'>EIPs Types <span className='ml-2'>610 </span></h1>
+                <h1 className='text-start text-xl font-bold mt-3 ml-3'>EIPs Types <span className='ml-2'>636 </span></h1>
                 <div className='w-[520px] h-[420px] my-[-50px] flex justify-center items-center'>
                     <Doughnut data={data} options={options} />
                 </div>

@@ -84,7 +84,6 @@ const EIPsTable = () => {
                                     </tr>
                                 </thead>
                                 <tbody className="divide-y divide-gray-200">
-                                    {/* <h1 className="text-white">{tableData.length}</h1> */}
                                     {/* {
                                         tableData.map(table =>
                                             <SingleTable

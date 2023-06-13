@@ -32,7 +32,7 @@ const EipsStatusCards = () => {
             <div className='bg-white flex justify-between items-center w-[250px] h-28 text-center px-4 py-2 gap-3 shadow-lg rounded-md'>
                 <div className='w-1/2'>
                     <p className='text-sm text-black'>Total EIPs</p>
-                    <h2 className=" font-bold text-black text-2xl">628</h2>
+                    <h2 className=" font-bold text-black text-2xl">636</h2>
                 </div>
                 <div className="className='w-1/2'">
                     <StatusCardsLineChart></StatusCardsLineChart>
