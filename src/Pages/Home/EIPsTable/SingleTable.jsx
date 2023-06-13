@@ -5,33 +5,28 @@ const SingleTable = ({ table }) => {
 
     return (
         <div>
-            <tr>
-                <td className="px-6 py-4 text-sm font-medium text-gray-800 whitespace-nowrap">
-                    1
-                </td>
-                <td className="px-6 py-4 text-sm text-gray-800 whitespace-nowrap">
-                    Jone Doe
-                </td>
-                <td className="px-6 py-4 text-sm text-gray-800 whitespace-nowrap">
-                    jonne62@gmail.com
-                </td>
-                <td className="px-6 py-4 text-sm font-medium text-right whitespace-nowrap">
-                    <a
-                        className="text-green-500 hover:text-green-700"
-                        href="#"
-                    >
-                        Edit
-                    </a>
-                </td>
-                <td className="px-6 py-4 text-sm font-medium text-right whitespace-nowrap">
-                    <a
-                        className="text-red-500 hover:text-red-700"
-                        href="#"
-                    >
-                        Delete
-                    </a>
-                </td>
-            </tr>
+            <tr class="border-b dark:border-neutral-500 text-[#3BC9DB] font-bold">
+                                    <td class="whitespace-nowrap px-6 py-4 font-medium">1</td>
+                                    <td class="whitespace-nowrap px-6 py-4">Storage of DNS Records in ENS</td>
+                                    <td class="whitespace-nowrap px-6 py-4">Jim McDonald (@mcdee)</td>
+                                    <td class="whitespace-nowrap px-6 py-4">Standards Track</td>
+                                    <td class="whitespace-nowrap px-6 py-4">ERC</td>
+                                    <td class="whitespace-nowrap px-6 py-4">Review</td>
+                                </tr>
+                                <tr class="border-b dark:border-neutral-500">
+                                    <td class="whitespace-nowrap px-6 py-4 font-medium ">2</td>
+                                    <td class="whitespace-nowrap px-6 py-4">Cell</td>
+                                    <td class="whitespace-nowrap px-6 py-4">Cell</td>
+                                    <td class="whitespace-nowrap px-6 py-4">Cell</td>
+                                    <td class="whitespace-nowrap px-6 py-4">Cell</td>
+                                </tr>
+                                <tr class="border-b ">
+                                    <td class="whitespace-nowrap px-6 py-4 font-medium ">3</td>
+                                    <td class="whitespace-nowrap px-6 py-4">Cell</td>
+                                    <td class="whitespace-nowrap px-6 py-4">Cell</td>
+                                    <td class="whitespace-nowrap px-6 py-4">Cell</td>
+                                    <td class="whitespace-nowrap px-6 py-4">Cell</td>
+                                </tr>
         </div>
     );
 };

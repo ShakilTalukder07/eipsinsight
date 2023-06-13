@@ -21,80 +21,51 @@ const EIPsTable = () => {
 
     console.log(tableData);
 
-  
+
 
     return (
-        <div>
-            {/* <h1 className="text-white">{tableData.length}</h1> */}
-            <div className="flex flex-col">
-                <div className="overflow-x-auto">
-                    <div className="p-1.5 w-full inline-block align-middle">
-                        <div className="overflow-hidden border rounded-lg">
-                            <table className="min-w-full divide-y divide-gray-200">
-                                <thead className="bg-gray-50">
-                                    <tr>
-                                        <th
-                                            scope="col"
-                                            className="px-6 py-3 text-xs font-bold text-left text-gray-500 uppercase "
-                                        >
-                                            Number
-                                        </th>
-                                        <th
-                                            scope="col"
-                                            className="px-6 py-3 text-xs font-bold text-left text-gray-500 uppercase "
-                                        >
-                                            Title
-                                        </th>
-                                        <th
-                                            scope="col"
-                                            className="px-6 py-3 text-xs font-bold text-left text-gray-500 uppercase "
-                                        >
-                                            Author
-                                        </th>
-                                        <th
-                                            scope="col"
-                                            className="px-6 py-3 text-xs font-bold text-right text-gray-500 uppercase "
-                                        >
-                                            Draft Date
-                                        </th>
-                                        <th
-                                            scope="col"
-                                            className="px-6 py-3 text-xs font-bold text-right text-gray-500 uppercase "
-                                        >
-                                            Final Date
-                                        </th>
-                                        <th
-                                            scope="col"
-                                            className="px-6 py-3 text-xs font-bold text-right text-gray-500 uppercase "
-                                        >
-                                            Type
-                                        </th>
-                                        <th
-                                            scope="col"
-                                            className="px-6 py-3 text-xs font-bold text-right text-gray-500 uppercase "
-                                        >
-                                            Category
-                                        </th>
-                                        <th
-                                            scope="col"
-                                            className="px-6 py-3 text-xs font-bold text-right text-gray-500 uppercase "
-                                        >
-                                            Status
-                                        </th>
-                                    </tr>
-                                </thead>
-                                <tbody className="divide-y divide-gray-200">
-                                    {/* {
-                                        tableData.map(table =>
-                                            <SingleTable
-                                                key={table._id}
-                                                table={table}
-                                            ></SingleTable>
-                                        )
-                                    } */}
-                                </tbody>
-                            </table>
-                        </div>
+        <div class=" bg-white rounded-lg flex flex-col overflow-x-auto">
+            <div class="sm:-mx-6 lg:-mx-8">
+                <div class="inline-block min-w-full py-2 sm:px-6 lg:px-8">
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full text-left text-sm font-light">
+                            <thead class="border-b font-medium dark:border-neutral-500 text-black">
+                                <tr>
+                                    <th scope="col" class="px-6 py-4">Number</th>
+                                    <th scope="col" class="px-6 py-4">Title</th>
+                                    <th scope="col" class="px-6 py-4">Author</th>
+                                    <th scope="col" class="px-6 py-4">Type</th>
+                                    <th scope="col" class="px-6 py-4">Category</th>
+                                    <th scope="col" class="px-6 py-4">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b dark:border-neutral-500 text-[#3BC9DB] font-bold">
+                                    <td class="whitespace-nowrap px-6 py-4 font-medium">1</td>
+                                    <td class="whitespace-nowrap px-6 py-4">Storage of DNS Records in ENS</td>
+                                    <td class="whitespace-nowrap px-6 py-4">Jim McDonald (@mcdee)</td>
+                                    <td class="whitespace-nowrap px-6 py-4">Standards Track</td>
+                                    <td class="whitespace-nowrap px-6 py-4">ERC</td>
+                                    <td class="whitespace-nowrap px-6 py-4">Review</td>
+                                </tr>
+                                <tr class="border-b dark:border-neutral-500 text-[#2BCC9C] font-bold">
+                                    <td class="whitespace-nowrap px-6 py-4 font-medium ">2</td>
+                                    <td class="whitespace-nowrap px-6 py-4">Client Script URI for Token Contracts</td>
+                                    <td class="whitespace-nowrap px-6 py-4">James (@JamesSmartCell), Weiwu (@weiwu-zhang)</td>
+                                    <td class="whitespace-nowrap px-6 py-4">Standards Track</td>
+                                    <td class="whitespace-nowrap px-6 py-4">ERC</td>
+                                    <td class="whitespace-nowrap px-6 py-4">Final</td>
+                                </tr>
+                                <tr class="border-b dark:border-neutral-500 text-[#3D9FF1] font-bold">
+                                    <td class="whitespace-nowrap px-6 py-4 font-medium ">3</td>
+                                    <td class="whitespace-nowrap px-6 py-4">Client Script URI for Token Contracts</td>
+                                    <td class="whitespace-nowrap px-6 py-4">James (@JamesSmartCell), Weiwu (@weiwu-zhang)</td>
+                                    <td class="whitespace-nowrap px-6 py-4">Standards Track</td>
+                                    <td class="whitespace-nowrap px-6 py-4">ERC</td>
+                                    <td class="whitespace-nowrap px-6 py-4">Review</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
