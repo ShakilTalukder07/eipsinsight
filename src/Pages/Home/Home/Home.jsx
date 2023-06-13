@@ -1,8 +1,7 @@
 import EipsStatusPieChart from "../EipsStatusPieChart/EipsStatusPieChart";
 import EipsStatusCards from "../EipsStatusCard/EipsStatusCards";
-import EipsStatusBarChart from "../EipsStatusBarChart/EipsStatusBarChart";
+import EipsTypeDonughtChart from "../EipsTypeDonughtChart/EipsTypeDonughtChart";
 import EIPsTable from "../EIPsTable/EIPsTable";
-import StatusCardsLineChart from "../StatusCardsLineChart/StatusCardsLineChart";
 
 
 const Home = () => {
@@ -14,7 +13,7 @@ const Home = () => {
             <div className="flex flex-col lg:flex-row justify-center items-center gap-10">
 
                 <div className="my-4 lg:my-10">
-                    <EipsStatusBarChart></EipsStatusBarChart>
+                    {/* <EipsTypeDonughtChart></EipsTypeDonughtChart> */}
                 </div>
                 <div className="my-4 lg:my-10">
                     <EipsStatusPieChart></EipsStatusPieChart>

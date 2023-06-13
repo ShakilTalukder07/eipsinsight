@@ -2,10 +2,11 @@
 const SingleType = ({ data }) => {
 
     const { type, number } = data
-    // console.log(data);
+    console.log(data);
 
     return (
-        <div className={`flex justify-center items-center w-40 h-16 text-center px-4 py-2 gap-2 shadow-lg rounded-md ${(type == "Standard Track") ? "bg-sky-400" : " " &&
+        <div className={`flex justify-center items-center w-40 h-16 text-center px-4 py-2 gap-2 shadow-lg rounded-md ${
+            (type == "Standard Track") ? "bg-sky-400" : " " &&
                 (type == "Meta") ? "bg-orange-400" : " " &&
                 (type == "Informational") ? "bg-cyan-400" : " " &&
                 (type == "Core") ? "bg-blue-400" : " " &&

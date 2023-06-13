@@ -52,7 +52,7 @@ const EipsStatusPieChart = () => {
         <div className="shadow-3xl transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-104 duration-200 ...">
             <div className='flex flex-col w-[500px] h-[350px] rounded-lg text-black bg-white'>
                 <h1 className='text-start text-xl font-bold mt-3 ml-3'>EIPs Status <span className='ml-2'>610</span></h1>
-                <div className='w-[500px] h-[330px] flex justify-center items-center'>
+                <div className='w-[500px] h-[400px] my-[-40px] flex justify-center items-center'>
                     <Pie data={data} options={options} />
                 </div>
             </div>
