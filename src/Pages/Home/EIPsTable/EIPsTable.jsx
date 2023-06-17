@@ -19,7 +19,7 @@ const EIPsTable = () => {
         return <Spinner></Spinner>
     }
 
-    console.log(tableData);
+    // console.log(tableData);
 
 
 
@@ -40,13 +40,13 @@ const EIPsTable = () => {
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr class="border-b dark:border-neutral-500 text-[#3BC9DB] font-bold">
-                                    <td class="whitespace-nowrap px-6 py-4 font-medium">1</td>
-                                    <td class="whitespace-nowrap px-6 py-4">Storage of DNS Records in ENS</td>
+                                <tr class="border-b dark:border-neutral-500  text-[#3BC9DB] font-bold hover:text-sky-500 hover:bg-gray-200">
+                                    <td class="whitespace-nowrap px-6 py-4 font-medium"><span className="px-3 py-2 rounded-xl bg-[#3BC9DB] text-white">1</span></td>
+                                    <td class="whitespace-nowrap px-6 py-4 ">Storage of DNS Records in ENS</td>
                                     <td class="whitespace-nowrap px-6 py-4">Jim McDonald (@mcdee)</td>
                                     <td class="whitespace-nowrap px-6 py-4">Standards Track</td>
                                     <td class="whitespace-nowrap px-6 py-4">ERC</td>
-                                    <td class="whitespace-nowrap px-6 py-4">Review</td>
+                                    <td class="whitespace-nowrap px-6 py-4"><span className="px-3 py-2 rounded-xl bg-[#3BC9DB] text-white">Review</span></td>
                                 </tr>
                                 <tr class="border-b dark:border-neutral-500 text-[#2BCC9C] font-bold">
                                     <td class="whitespace-nowrap px-6 py-4 font-medium ">2</td>

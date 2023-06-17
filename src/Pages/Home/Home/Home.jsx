@@ -3,9 +3,12 @@ import EipsStatusCards from "../EipsStatusCard/EipsStatusCards";
 import EIPsTable from "../EIPsTable/EIPsTable";
 import EipsTypeDonughtChart from "../EipsTypeDonughtChart/EipsTypeDonughtChart";
 import AllEipsBarChart from "../AllEipsBarChart/AllEipsBarChart";
+import HomeStatus from "../HomeStatus/HomeStatus";
 
 
 const Home = () => {
+
+
     return (
         <div>
             <div className="mt-10">
@@ -25,6 +28,9 @@ const Home = () => {
             </div>
             <div className="my-4 lg:my-10 mx-12">
                 <EIPsTable></EIPsTable>
+            </div>
+            <div className="my-4 lg:my-10 mx-12">
+                <HomeStatus></HomeStatus>
             </div>
         </div>
     );

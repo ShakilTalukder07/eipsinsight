@@ -44,12 +44,21 @@ const StatusCardsLineChart = () => {
     },
     scales: {
       x: {
-         display: false,
+        display: false,
       },
       y: {
-         display: false,
+        display: false,
       }
-   },
+    },
+    animations: {
+      tension: {
+        duration: 1000,
+        easing: 'linear',
+        from: 1,
+        to: 1,
+        loop: true
+      }
+    },
   };
 
   const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
@@ -59,15 +68,16 @@ const StatusCardsLineChart = () => {
     datasets: [
       {
         label: 'Dataset 1',
-        data: [10, 20, 30, 40, 50],
+        data: [10.5, 14.3, 16, 19.7, 23],
         borderColor: 'rgb(11,9,5)',
         backgroundColor: 'rgba(11,9,5)',
       }
     ],
   };
 
+
   return (
-    <div className="text-white mr-1 my-1 w-36 h-16">
+    <div className="text-white ml-10 my-1 w-36 h-16">
       <Line options={options} data={data} />
     </div>
   );
