@@ -36,5 +36,27 @@
                 "number": 1
             }
         ]
+    },
+    {
+        "type": "Draft",
+        "number": 127,
+        "status": [
+            {
+                "category": "Core",
+                "number": 19
+            },
+            {
+                "category": "ERC",
+                "number": 51
+            },
+            {
+                "category": "Interface",
+                "number": 11
+            },
+            {
+                "category": "Informational",
+                "number": 27
+            }
+        ]
     }
 ]

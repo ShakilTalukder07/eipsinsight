@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from 'react';
 import {
     Chart as ChartJS,
     CategoryScale,
@@ -6,10 +7,10 @@ import {
     LineElement,
     Title,
     Tooltip,
+    Filler,
     Legend,
 } from 'chart.js';
-import { useEffect, useState } from 'react';
-import { Bar } from 'react-chartjs-2';
+import { Bar} from 'react-chartjs-2';
 
 ChartJS.register(
     CategoryScale,
@@ -18,45 +19,38 @@ ChartJS.register(
     LineElement,
     Title,
     Tooltip,
+    Filler,
     Legend
 );
 
 
 const options = {
-    indexAxis: 'x',
-    elements: {
-        bar: {
-            borderWidth: 2,
-        },
-    },
     responsive: true,
     plugins: {
         legend: {
             position: 'right',
-            display: false
         },
+        // title: {
+        //     display: true,
+        //     text: 'Chart.js Line Chart',
+        // },
     },
 };
 
 
-const HomeWithdraw = () => {
 
+const Final = () => {
 
     const [data, setData] = useState({
 
         labels: ['Created Date'],
         datasets: [
             {
-                label: 'Core',
+                fill: true,
+                label: 'EIPs',
                 data: [],
-                borderColor: 'rgb(255, 99, 132)',
-                backgroundColor: 'rgba(25, 90, 13, 0.5)',
-            },
-            {
-                label: 'Living',
-                data: [],
-                borderColor: 'rgb(255, 99, 132)',
-                backgroundColor: 'rgba(25, 90, 13, 0.5)',
+                borderColor: 'rgb(53, 162, 235)',
+                backgroundColor: 'rgba(53, 162, 235, 0.5)',
             },
         ],
     });
@@ -67,32 +61,29 @@ const HomeWithdraw = () => {
             const number = [];
             const labelSet = [];
 
-            await fetch("../../../../../public/eipStatus.json")
+            await fetch("http://localhost:5000/alleips")
                 .then(res => res.json())
                 .then((res) => {
 
-                    // console.log("ressss", res[0].status[0].number)
+                    // console.log("ressss", res[1].Draft)
 
-                    for (const value of res[1].status) {
-                        number.push(value.number);
+                    for (const value of res[2].eips) {
+                        number.push(value.unique_ID);
                         // dataSet2.push(val.type)
-                        labelSet.push(value.category);
+                        labelSet.push(value.created.slice(0, 10));
 
                     }
                     setData({
-                        type: "Withdraw",
-                        number: 26,
+                        type: res[2].status,
+                        number: res[2].eips.length,
                         labels: labelSet,
                         datasets: [
                             {
-                                label: 'Status',
+                                label: 'EIPs',
                                 data: number,
                                 borderColor: 'rgba(249, 251, 251)',
                                 backgroundColor: [
-                                    'rgba(96, 165, 250)',
-                                    'rgba(192, 132, 252)',
-                                    'rgba(74, 222, 128)',
-                                    'rgba(34, 211, 238)',
+                                    'rgba(43, 204, 156)'
                                 ],
                             },
                         ],
@@ -109,7 +100,7 @@ const HomeWithdraw = () => {
 
     return (
         <div className="shadow-3xl transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-104 duration-200 ...">
-            <h1 className='flex justify-center items-center bg-white text-black text-2xl font-bold rounded-sm w-48 h-12 mb-2 mx-2'>{data.type}<span className="bg-[#FF4E4E] px-3 ml-2 rounded-sm">{data.number}</span> </h1>
+            <h1 className='flex justify-center items-center bg-white text-black text-2xl font-bold rounded-sm w-48 h-12 mb-2 mx-2'>{data.type}<span className="bg-[#2BCC9C] px-3 ml-2 rounded-sm">{data.number}</span> </h1>
             <div className='w-[500px] h-[330px] flex justify-center items-center mx-2 p-2 rounded-sm bg-white'>
                 <Bar data={data} options={options} />
             </div>
@@ -117,4 +108,4 @@ const HomeWithdraw = () => {
     );
 };
 
-export default HomeWithdraw;
+export default Final;

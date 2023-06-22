@@ -1,0 +1,30 @@
+[
+    {
+        "type": "Draft",
+        "number": 127,
+        "core": [
+            {
+                "number": 1,
+                "date": "Jan 2018"
+            },
+            {
+                "number": 1,
+                "date": "Nov 2020"
+            }
+        ],
+        "erc": [
+            {
+                "number": 1,
+                "date": "June 2016"
+            },
+            {
+                "number": 1,
+                "date": "Feb 2018"
+            },
+            {
+                "number": 1,
+                "date": "Nov 2020"
+            }
+        ]
+    }
+]

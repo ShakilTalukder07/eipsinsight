@@ -1,7 +1,7 @@
 [
     {
         "type": "Standard Track",
-        "number": 609
+        "number": 612
     },
     {
         "type": "Meta",
@@ -13,11 +13,11 @@
     },
     {
         "type": "Core",
-        "number": 215
+        "number": 216
     },
     {
         "type": "ERC",
-        "number": 331
+        "number": 333
     },
     {
         "type": "Networking",

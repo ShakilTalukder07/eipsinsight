@@ -52,7 +52,7 @@ const EipsTypeDonughtChart = () => {
             const number = [];
             const labelSet = [];
 
-            await fetch("../../../../public/eipType.json")
+            await fetch("eipType.json")
                 .then(res => res.json())
                 .then((res) => {
                     // console.log("ressss", res)
@@ -62,7 +62,7 @@ const EipsTypeDonughtChart = () => {
                         labelSet.push(value.type)
                     }
                     setData({
-                        labels: ['Standard Track (609)', 'Meta (20)', 'Informational (7)', 'Core (215)', 'ERC (331)', 'Networking (15)', 'Interface (48)'],
+                        labels: labelSet,
                         datasets: [
                             {
                                 label: "EIPs",

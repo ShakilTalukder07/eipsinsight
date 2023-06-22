@@ -5,21 +5,22 @@ import { BiUserCircle } from 'react-icons/bi'
 
 const Navbar = () => {
 
+
     const menu = <>
         <li>
-            <Link className="mx-4 text-xl hover:border-b-2 p-4 font-semibold border-b-white duration-100" to="/allEips">AllEIPs</Link>
+            <Link className="mx-4 text-xl hover:border-b-2 hover:text-white p-4 font-semibold border-b-white duration-100" to="/allEips">AllEIPs</Link>
         </li>
         <li>
-            <Link className="mx-4 text-xl hover:border-b-2 p-4 font-semibold border-b-white duration-100" to="/type">Type</Link>
+            <Link className="mx-4 text-xl hover:border-b-2 hover:text-white p-4 font-semibold border-b-white duration-100" to="/type">Type</Link>
         </li>
         <li>
-            <Link className="mx-4 text-xl hover:border-b-2 p-4 font-semibold border-b-white duration-100" to="/status">Status</Link>
+            <Link className="mx-4 text-xl hover:border-b-2 hover:text-white p-4 font-semibold border-b-white duration-100" to="/status">Status</Link>
         </li>
         <li>
-            <Link className="mx-4 text-xl hover:border-b-2 p-4 font-semibold border-b-white duration-100" to="/insight">Insight</Link>
+            <Link className="mx-4 text-xl hover:border-b-2 hover:text-white p-4 font-semibold border-b-white duration-100" to="/insight">Insight</Link>
         </li>
         <li>
-            <Link className="mx-4 text-xl hover:border-b-2 p-4 font-semibold border-b-white duration-100" to="/signIn">SignIn</Link>
+            <Link className="mx-4 text-xl hover:border-b-2 hover:text-white p-4 font-semibold border-b-white duration-100" to="/signIn">SignIn</Link>
         </li>
     </>
 
@@ -58,11 +59,11 @@ const Navbar = () => {
 
                         <li tabIndex={0}>
                             <details>
-                                <summary className="text-xl hover:border-b-2 p-4 font-semibold border-b-white duration-100">Resources</summary>
-                                <ul className="p-2">
-                                    <li className="bg-[#1B3838] rounded-lg my-1"><a>EIPs & Standardization Process</a></li>
-                                    <li className="bg-[#1B3838] rounded-lg mb-1"><a>Ethereum Network Upgrade Process</a></li>
-                                    <li className="bg-[#1B3838] rounded-lg"><a>EIP:20 Token Standard</a></li>
+                                <summary className="text-xl hover:border-b-2 hover:text-white p-4 font-semibold border-b-white duration-100">Resources</summary>
+                                <ul className="p-2 hover:text-white">
+                                    <li className="bg-[#1B3838] hover:text-white rounded-lg my-1 py-1 px-1"><a>EIPs & Standardization Process</a></li>
+                                    <li className="bg-[#1B3838] hover:text-white rounded-lg mb-1 py-1 px-1"><a>Ethereum Network Upgrade Process</a></li>
+                                    <li className="bg-[#1B3838] hover:text-white rounded-lg py-1 px-1"><a>EIP:20 Token Standard</a></li>
                                 </ul>
                             </details>
                         </li>
@@ -75,9 +76,9 @@ const Navbar = () => {
                                <BiUserCircle className="w-10 h-10"></BiUserCircle>
                             </div>
                         </label>
-                        <ul tabIndex={0} className="mt-3 p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
-                            <li className="bg-[#1B3838] rounded-lg my-1"><a>Settings</a></li>
-                            <li className="bg-[#1B3838] rounded-lg"><a>Logout</a></li>
+                        <ul tabIndex={0} className="mt-3 p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52 hover:text-white">
+                            <li className="bg-[#1B3838] hover:text-white rounded-lg my-1"><a>Settings</a></li>
+                            <li className="bg-[#1B3838] hover:text-white rounded-lg"><a>Logout</a></li>
                         </ul>
                     </div>
                 </div>

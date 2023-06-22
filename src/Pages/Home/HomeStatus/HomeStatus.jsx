@@ -1,7 +1,9 @@
 import { useState } from "react";
-import HomeLiving from "./HomeLiving/HomeLiving";
 import HomeWithdraw from "./HomeWithdraw/HomeWithdraw";
 import './HomeStatus.css'
+import HomeDraft from "./HomeDraft/HomeDraft";
+import HomeFinal from "./HomeFinal/HomeFinal";
+import HomeLiving from "./HomeLiving/HomeLiving";
 
 const HomeStatus = () => {
 
@@ -25,19 +27,25 @@ const HomeStatus = () => {
             </div>
             {
                 insight === 1 ? (
-                    <div className="my-4 lg:my-10 mx-12">
-                        <HomeLiving></HomeLiving>
+                    <div>
+                        <div className="my-4 lg:my-10 mx-12">
+                            <HomeWithdraw></HomeWithdraw>
+                        </div>
                     </div>
                 ) : (
-            <div className="my-4 lg:my-10 mx-12">
-                <HomeWithdraw></HomeWithdraw>
-            </div>
-            )
+                    <div>
+                        <div className="my-4 lg:my-10 mx-12">
+                            <HomeLiving></HomeLiving>
+                        </div>
+                        <div className="my-4 lg:my-10 mx-12">
+                            <HomeDraft></HomeDraft>
+                        </div>
+                        <div className="my-4 lg:my-10 mx-12">
+                            <HomeFinal></HomeFinal>
+                        </div>
+                    </div>
+                )
             }
-            {/* <div className="flex justify-center items-center">
-
-
-            </div> */}
         </>
     );
 };
