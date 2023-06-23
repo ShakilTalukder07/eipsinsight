@@ -24,7 +24,7 @@ const TypeSection = () => {
 
     return (
         <div>
-            <h3 className="text-white font-semibold font-xl my-4 ml-4">Total EIPs (636)</h3>
+            <h3 className="text-white font-semibold font-xl ml-4">Total EIPs (636)</h3>
             <div className='grid gap-4 grid-cols-3 md:grid-cols-5 lg:grid-cols-7 mx-8'>
                 {
                     allData.length && allData.map((data) => <SingleType

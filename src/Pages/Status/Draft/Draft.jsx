@@ -64,18 +64,23 @@ const Draft = () => {
                 .then(res => res.json())
                 .then((res) => {
 
-                    console.log("ressss", res)
+                    // console.log("ressss", res)
 
-                    for (const value of res[5].eips) {
-                        number.push(value.unique_ID);
-                        // dataSet2.push(val.type)
+                    let eip = res[5].eips
+
+                    // console.log(eip);
+
+                    for (let value of eip) {
                         labelSet.push(value.created.slice(0, 10));
-
                     }
+                    for (let i = 1; i < eip.length; i++) {
+                        number.push(i)
+                    }
+
                     setData({
                         type: res[5].status,
                         number: res[5].eips.length,
-                        labels: labelSet,
+                        labels: labelSet.sort(),
                         datasets: [
                             {
                                 label: 'EIPs',

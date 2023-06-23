@@ -10,7 +10,7 @@ import {
     Filler,
     Legend,
 } from 'chart.js';
-import { Bar} from 'react-chartjs-2';
+import { Bar } from 'react-chartjs-2';
 
 ChartJS.register(
     CategoryScale,
@@ -67,16 +67,22 @@ const Final = () => {
 
                     // console.log("ressss", res[1].Draft)
 
-                    for (const value of res[2].eips) {
-                        number.push(value.unique_ID);
-                        // dataSet2.push(val.type)
-                        labelSet.push(value.created.slice(0, 10));
+                    let eip = res[2].eips
 
+                    // console.log(eip);
+
+                    for (let value of eip) {
+                        labelSet.push(value.created.slice(0, 10));
                     }
+
+                    for (let i = 1; i < eip.length; i++) {
+                        number.push(i)
+                    }
+
                     setData({
                         type: res[2].status,
                         number: res[2].eips.length,
-                        labels: labelSet,
+                        labels: labelSet.sort(),
                         datasets: [
                             {
                                 label: 'EIPs',

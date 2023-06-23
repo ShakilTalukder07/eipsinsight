@@ -5,7 +5,7 @@ const SingleType = ({ data }) => {
     // console.log(data);
 
     return (
-        <div className={`flex justify-center items-center w-40 h-16 text-center px-4 py-2 gap-2 shadow-[#FAEA10] shadow-md rounded-md transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-104 duration-200 ... ${
+        <div className={`flex justify-center items-center h-16 text-center px-4 py-2 gap-2 shadow-[#FAEA10] shadow-md rounded-md transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-104 duration-200 ... ${
             (type == "Standard Track") ? "bg-sky-400" : " " &&
                 (type == "Meta") ? "bg-orange-400" : " " &&
                 (type == "Informational") ? "bg-cyan-400" : " " &&

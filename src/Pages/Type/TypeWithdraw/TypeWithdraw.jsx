@@ -18,6 +18,11 @@ Chart.register(
 )
 
 const options = {
+    Element: {
+
+        borderWidth: 40,
+        hoverBorderWidth: 0,
+    },
     responsive: true,
     plugins: {
         legend: {
@@ -80,6 +85,7 @@ const TypeWithdraw = () => {
                                 borderWidth: 1,
                             }
                         ],
+
                     })
                     // console.log("arrData", dataSet1, dataSet2)
                 })
@@ -92,7 +98,7 @@ const TypeWithdraw = () => {
 
     return (
         <div className="flex gap-4">
-            <div className="w-1/2 shadow-3xl transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-104 duration-200 ...">
+            <div className="w-1/2 shadow-2xl rounded-md transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-104 duration-200 ...">
                 <div className='flex flex-col w-[500px] h-[350px] rounded-lg text-black bg-white'>
                     <h1 className='text-start text-xl font-bold mt-3 ml-3'>Withdraw<span className='ml-2'>26</span></h1>
                     <div className='w-[520px] h-[420px] my-[-50px] flex justify-center items-center'>
@@ -103,7 +109,7 @@ const TypeWithdraw = () => {
 
             {/* ======================= table ========================= */}
 
-            <div class=" bg-white w-1/2 rounded-lg flex flex-col overflow-x-auto">
+            <div class=" bg-white w-1/2 rounded-md shadow-2xl flex flex-col overflow-x-auto">
                 <div class="sm:-mx-6 lg:-mx-8">
                     <div class="inline-block min-w-full py-2 sm:px-6 lg:px-8">
                         <div class="overflow-x-auto">

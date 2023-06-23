@@ -71,7 +71,6 @@ const Withdraw = () => {
                         number.push(value.number);
                         // dataSet2.push(val.type)
                         labelSet.push(value.category);
-
                     }
                     setData({
                         type: "Withdraw",
