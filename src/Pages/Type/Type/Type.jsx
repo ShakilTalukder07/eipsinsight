@@ -7,12 +7,8 @@ const Type = () => {
 
     return (
         <div>
-            <div className='flex justify-between'>
-
-                <h1 className="flex justify-center items-center bg-[#10B981] font-bold text-2xl p-2 mt-4 h-14 w-60 rounded-md text-white"><span className='mr-1'><BiCategory></BiCategory></span> Type - Category</h1>
-
-                {/* <h1 className="flex justify-center items-center bg-[#10B981] font-bold text-2xl p-2 mt-4 h-14 w-60 rounded-md text-white">Total EIPs - <span className='ml-1'>336</span></h1> */}
-
+            <div className='flex justify-center items-center'>
+                <h1 className="flex justify-center items-center shadow-2xl text-[#036666] mt-4 p-4 rounded-md font-semibold text-center text-4xl"><span className='mr-4'><BiCategory></BiCategory></span>Type - Category</h1>
             </div>
             <div className='mt-2'>
                 <TypeSection></TypeSection>

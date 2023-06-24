@@ -114,7 +114,7 @@ const TypeWithdraw = () => {
                     <div class="inline-block min-w-full py-2 sm:px-6 lg:px-8">
                         <div class="overflow-x-auto">
                             <table class="min-w-full text-left text-sm font-light">
-                                <thead class="border-b font-medium dark:border-neutral-500 text-black">
+                                <thead class="border-b font-medium text-lg dark:border-neutral-500 text-black">
                                     <tr>
                                         <th scope="col" class="px-6 py-4">Type & Category</th>
                                         <th scope="col" class="px-6 py-4">Number Of EIPs</th>
@@ -122,20 +122,20 @@ const TypeWithdraw = () => {
                                 </thead>
                                 <tbody>
                                     <tr class="border-b dark:border-neutral-500  text-[#3892FF] font-bold hover:text-sky-500 hover:bg-gray-200">
-                                        <td class="whitespace-nowrap px-6 py-4 text-xl font-medium">Core</td>
-                                        <td class="whitespace-nowrap px-6 py-4 "><span className="px-3 py-2 rounded-xl bg-[#3892FF] text-white">19</span></td>
+                                        <td class="whitespace-nowrap px-6 py-4 text-lg font-medium">Core</td>
+                                        <td class="whitespace-nowrap px-6 py-4 "><span className="px-3 py-2 rounded-xl font-medium  bg-[#3892FF] text-white">19</span></td>
                                     </tr>
                                     <tr class="border-b dark:border-neutral-500  text-[#AD5BFF] font-bold hover:text-sky-500 hover:bg-gray-200">
-                                        <td class="whitespace-nowrap px-6 py-4 text-xl font-medium">ERC</td>
-                                        <td class="whitespace-nowrap px-6 py-4 "><span className="px-3 py-2 rounded-xl bg-[#AD5BFF] text-white">5</span></td>
+                                        <td class="whitespace-nowrap px-6 py-4 font-medium text-lg">ERC</td>
+                                        <td class="whitespace-nowrap px-6 py-4 "><span className="px-3 py-2 rounded-xl bg-[#AD5BFF] text-white font-medium ">5</span></td>
                                     </tr>
                                     <tr class="border-b dark:border-neutral-500  text-[#4ADE80] font-bold hover:text-sky-500 hover:bg-gray-200">
-                                        <td class="whitespace-nowrap px-6 py-4 text-xl font-medium">Interface</td>
-                                        <td class="whitespace-nowrap px-6 py-4 "><span className="px-3 py-2 rounded-xl bg-[#4ADE80] text-white">1</span></td>
+                                        <td class="whitespace-nowrap px-6 py-4 font-medium text-lg">Interface</td>
+                                        <td class="whitespace-nowrap px-6 py-4 "><span className="px-3 py-2 rounded-xl bg-[#4ADE80] text-white font-medium ">1</span></td>
                                     </tr>
                                     <tr class="border-b dark:border-neutral-500  text-[#22D3EE] font-bold hover:text-sky-500 hover:bg-gray-200">
-                                        <td class="whitespace-nowrap px-6 py-4 text-xl font-medium">Informational</td>
-                                        <td class="whitespace-nowrap px-6 py-4 "><span className="px-3 py-2 rounded-xl bg-[#22D3EE] text-white">1</span></td>
+                                        <td class="whitespace-nowrap px-6 py-4 font-medium text-lg">Informational</td>
+                                        <td class="whitespace-nowrap px-6 py-4 "><span className="px-3 py-2 rounded-xl bg-[#22D3EE] text-white font-medium ">1</span></td>
                                     </tr>
                                 </tbody>
                             </table>

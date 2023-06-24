@@ -5,13 +5,11 @@
         "status": [
             {
                 "category": "Meta",
-                "number": 1,
-                "create": "Aug 2022"
+                "number": 1
             },
             {
                 "category": "Informational",
-                "number": 1,
-                "create": "June 2021"
+                "number": 1
             }
         ]
     },
